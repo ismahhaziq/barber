@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eBarber Appointment System</title>
+    <link rel="stylesheet" href="../css/indexcss.css" />
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">eBarber<span>.</span></a>
+        <div class="menuToggle" onclick="toggleMenu();"></div> 
+        <ul class="navigation">
+            <li><a href="#banner" onclick="toggleMenu();">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu();">About</a></li>
+            <li><a href="#service" onclick="toggleMenu();">Service</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+            <li><a href="../log_signup/userlogin.php" onclick="toggleMenu();">Log In</a></li>
+        </ul>
+    </header>
+    <section class="banner" id="banner">
+        <div class="content">
+            <h2>eBARBER SHOP</h2>
+            <h4>Enjoy the life with good hair.</h4>
+            <a href="#service" class="btn">Our Service</a>
+        </div>
+    </section>
+    
+    <section class="about" id="about">
+        <div class="row">
+            <div class="col50">
+                <h2 class="titleText"><span>A</span>bout Us</h2>
+                <p>The eBarber Shop Appointment System is developed to allows customers in the area to make an appointment whenever the want to cut their hair. This system replaced old eBarber Shop Appointment System which depend on paperwork to record and store customers details and appointment. </p>
+            </div>
+            <div class="col50">
+                <div class="imgBx">
+                        <img height="450px" width="600px" src="../image/barber3.png" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service" id="service">
+        <div class="title white">
+            <h2 class="titleText"><span>S</span>ervices</h2></h2>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="../image/barber2.jpg" />
+                </div>
+                <div class="text">
+                    <h3>Signature Hot Shave</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="../image/barber1.jpg" />
+                </div>
+                <div class="text">
+                    <h3>Signature Haircut</h3>
+                </div>
+            </div>
+        </div>
+        <div class="title">
+            <a href="#" class="btn">Main Page</a>
+        </div>
+    </section>
+
+
+    <section class="contact" id="contact">
+        <div class="title">
+            <h2 class="titleText"><span>C</span>ontact Us</h2>
+            <p>You also can email us : <a href="eBarbershopx@gmail.com" target="_blank">eBarbershopx@gmail.com</a></p>
+        </div>
+       
+    </section>
+
+    <div class="copyrightText">
+        <p>Copyright 2021 <a href="#">eBarbershop Appointment.</a>. System</p>
+    </div>
+
+        <script type="text/javascript">
+            window.addEventListener('scroll', function () {
+                const header = document.querySelector('header');
+                header.classList.toggle("sticky", window.scrollY > 0)
+            });
+
+            function toggleMenu() {
+                const menuToggle = document.querySelector('.menuToggle');
+                const navigation = document.querySelector('.navigation');
+                menuToggle.classList.toggle('active');
+                navigation.classList.toggle('active');
+            }
+        </script>
+</body>
+</html>
